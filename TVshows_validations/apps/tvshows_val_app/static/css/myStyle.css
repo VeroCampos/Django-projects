@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: auto;
+}
+#wrapper{
+    margin: 0px;
+    padding: 0 auto;
+}
+#main{
+    margin: 10px;
+    padding: 20px;
+    max-width: 850px;
+}
+.bordframe{
+    display: inline-block;
+    min-width: 650px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+table{
+    background-color: linen;
+    border: 1px solid black;
+    border-spacing: 0px;
+    margin: 5px 10px 5px 40px;
+    min-width: 770px;
+    text-align: center;
+
+}
+thead{
+    height: 30px;
+    background-color: black;
+    color: rgb(240, 240, 70);
+}
+thead td{
+    font-size: 14pt;
+    height: 30px;
+    border: 1px solid black;
+    
+
+}
+thead tr{
+    background-color: black;
+   
+}
+td{
+    padding: 6px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: maroon;
+    text-align: center;
+    font-weight: 500;
+}
+h2{
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: purple;
+
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: purple;
+
+}
+form{
+    margin: 4px 30px;
+    padding: 10px; 
+}
+input{
+    margin: 5px;
+    padding-bottom: 6px;
+    
+}
+.btable {
+    display: inline-block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    padding-top: 2px 25px;
+   
+}
+.Rside{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+}
+a{
+    color: maroon;
+}
+.headings{
+    font-weight: bold;
+}
+.redval{
+    color: red;
+}

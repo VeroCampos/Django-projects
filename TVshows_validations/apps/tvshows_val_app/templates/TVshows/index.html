@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/myStyle.css' %}">
+    <title>Show's Guide</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <h1>All Shows</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Title</td>
+                        <td>Network</td>
+                        <td>Release Date</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for shows in show %}
+                    <tr>
+                        <td> {{ shows.id }}</td>
+                        <td> {{ shows.title }}</td>
+                        <td> {{ shows.netw }}</td>
+                        <td> {{ shows.release }}</td>
+                        <td><a class='btable' href="/shows/{{shows.id}}">Show</a> | <a class='btable' href="/shows/{{shows.id}}/edit">Edit</a> | <a class='btable' href="/destroy/{{shows.id}}">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <a class="btable" href="/shows/new">Add New Show</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/myStyle.css' %}">
+    <title>Add Show</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main" >
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="redval" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <div class="bordframe">
+                <h2>Add a New Show</h2> <a class='Rside' href="/shows">Go Back</a>
+                <form action="/shows/create" method='POST'>
+                    {% csrf_token %}
+                    <p>Title: <input type="text" name='title'> </p>
+                    <p>Network: <input type="text" name='netw'> 
+                        Release Date: <input type="date" name='release'> </p>
+                    <p>Description: <input type="text" name='desc'> </p>
+                    <br>
+                    <input type="submit" value='CREATE'>
+                </form>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
