@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0 auto;
+}
+#wrapper{
+    min-width: 850px;
+}
+#main{
+    display: inline-block;
+    min-width: 800px;
+    margin: 5px 40px;
+    padding: 30px;
+    border-radius: 2px;
+    border: 2px solid black;
+    background-image: repeating-linear-gradient(rgb(100, 17, 121), orange);
+    text-align: center;
+    
+}
+.boxes{
+    display: inline-block;
+    vertical-align: top;
+    min-width: 170px;
+    margin: 10px 8px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 10px 15px rgb(199, 173, 24) inset;
+}
+.results{
+    width: 700px;
+    height: 210px;
+    overflow: scroll;
+    border: 2px solid;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+    margin: 20px 85px;
+}
+holder{
+    min-width: 750px;
+}
+h1{
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(199, 173, 24);
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(240, 236, 25);
+    text-align: center;
+    padding-top: 5px;
+}
+button{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(146, 11, 199);
+}
+p{
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 6px;
+    color: rgb(99, 99, 26);
+}
+.gold{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: rgb(10, 150, 10);
+}
+a{
+    display: inline-block;
+    min-width: 110px;
+    margin: 10px;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+}
+.b1{
+    background-color: rgb(143, 21, 41);
+    color: whitesmoke;
+   
+}
+.red{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color:red;
+}
+.green{
+    color: olive;
+}

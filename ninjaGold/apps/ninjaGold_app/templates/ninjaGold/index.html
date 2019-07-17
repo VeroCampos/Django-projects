@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ninjaGold/style.css' %}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Ninja Gold</h1>
+        <div id="main">
+            <h2>Your Gold:{{ request.session.totalGold }}</h2>
+            <div class="boxes">
+                <form action="/processGold" method="POST">
+                    {% csrf_token %}
+                    <p>Farm</p>
+                    <p><input type="hidden" name="building" value="farm"/></p>
+                    <button type="submit" >Find Gold!</button>
+                </form>
+            </div>
+                
+            <div class="boxes">
+                <form action="/processGold" method="POST">
+                    {% csrf_token %}
+                    <p>Cave</p>
+                    <p><input type="hidden" name="building" value="cave"/></p>
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+            <div class="boxes">
+                <form action="/processGold" method="POST">
+                    {% csrf_token %}
+                    <p>House</p>
+                    <p><input type="hidden" name="building" value="house"/></p>
+                    <button type="submit">Find Gold!</button> 
+                </form>
+            </div>
+            <div class="boxes">
+                <form action="/processGold" method="POST">
+                    {% csrf_token %}
+                    <p>Casino</p>
+                    <p><input type="hidden" name="building" value="casino"/></p>
+                    <button type="submit">Find Gold!</button>
+                </form>
+        </div>
+            
+            
+            <h2>Activities:</h2>
+            <div class="results">
+                {% for list in request.session.gold_list reversed %}
+                    {{ list | safe }}
+                {% endfor %}
+            </div>
+            <a class="b1" href="/reset">Reset</a>
+        </div>
+    </div>
+    
+</body>
+</html>
